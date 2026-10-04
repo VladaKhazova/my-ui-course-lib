@@ -2,6 +2,10 @@
   padding: 12px;
 }
 
+.buttons-page__header {
+  margin-bottom: 20px;
+}
+
 .buttons-page__title {
   color: #17171B;
   font-size: 28px;
@@ -26,4 +30,27 @@
   justify-content: center;
   color: #17171B;
   font-weight: 700;
+}
+
+.buttons-page__date-pickers {
+  margin-top: 48px;
+}
+
+.buttons-page__section-header {
+  margin-bottom: 20px;
+}
+
+.buttons-page__section-title {
+  margin: 0 0 6px;
+  color: #17171B;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.buttons-page__date-picker-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  gap: 24px 32px;
+  align-items: start;
+  max-width: 980px;
 }
