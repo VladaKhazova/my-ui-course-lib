@@ -1,0 +1,29 @@
+.buttons-page {
+  padding: 12px;
+}
+
+.buttons-page__title {
+  color: #17171B;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.buttons-page__subtitle {
+  color: #A2A2A4;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.buttons-page__grid {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  gap: 36px 40px;
+  align-items: center;
+}
+
+.buttons-page__header-hint {
+  display: flex;
+  justify-content: center;
+  color: #17171B;
+  font-weight: 700;
+}
