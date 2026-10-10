@@ -37,11 +37,13 @@
     border-color: #17171B;
 }
 
+.button--fill.button--hover,
 .button--fill:hover {
     background-color: #2D2D33;
     border-color: #2D2D33;
 }
 
+.button--fill.button--active,
 .button--fill:active {
     background-color: #050506;
     border-color: #050506;
@@ -54,11 +56,13 @@
     border-color: #17171B;
 }
 
+.button--outline.button--hover,
 .button--outline:hover {
     background-color: #F4F4F5;
     border-color: #17171B;
 }
 
+.button--outline.button--active,
 .button--outline:active {
     background-color: #E7E7EA;
     border-color: #17171B;
@@ -71,11 +75,13 @@
     border-color: #FFFFFF;
 }
 
+.button--text.button--hover,
 .button--text:hover {
     background-color: #F4F4F5;
     border-color: #F4F4F5;
 }
 
+.button--text.button--active,
 .button--text:active {
     background-color: #E7E7EA;
     border-color: #E7E7EA;

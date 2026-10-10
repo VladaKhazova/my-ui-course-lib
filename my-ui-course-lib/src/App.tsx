@@ -17,9 +17,6 @@ function App() {
                 <h1 className="buttons-page__title">
                     Кнопки. размеры, состояния, вариации.
                 </h1>
-                <h2 className="buttons-page__subtitle">
-                    Проверка производится интерактивно (hover - навести, active - нажать).
-                </h2>
             </div>
             <div className="buttons-page__grid">
                 <div className="buttons-page__header-hint">default</div>
@@ -27,6 +24,7 @@ function App() {
                 <div className="buttons-page__header-hint">active</div>
                 <div className="buttons-page__header-hint">disabled</div>
 
+                <div className="buttons-page__variant-title">fill: S / M / L</div>
                 <Button variant="fill" size="s" ButtonState="default">Кнопка</Button>
                 <Button variant="fill" size="s" ButtonState="hover">Кнопка</Button>
                 <Button variant="fill" size="s" ButtonState="active">Кнопка</Button>
@@ -40,6 +38,7 @@ function App() {
                 <Button variant="fill" size="l" ButtonState="active">Кнопка</Button>
                 <Button variant="fill" size="l" disabled>Кнопка</Button>
 
+                <div className="buttons-page__variant-title">outline: S / M / L</div>
                 <Button variant="outline" size="s" ButtonState="default">Кнопка</Button>
                 <Button variant="outline" size="s" ButtonState="hover">Кнопка</Button>
                 <Button variant="outline" size="s" ButtonState="active">Кнопка</Button>
@@ -53,6 +52,7 @@ function App() {
                 <Button variant="outline" size="l" ButtonState="active">Кнопка</Button>
                 <Button variant="outline" size="l" disabled>Кнопка</Button>
 
+                <div className="buttons-page__variant-title">text: S / M / L</div>
                 <Button variant="text" size="s" ButtonState="default">Кнопка</Button>
                 <Button variant="text" size="s" ButtonState="hover">Кнопка</Button>
                 <Button variant="text" size="s" ButtonState="active">Кнопка</Button>
