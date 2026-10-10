@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Button } from "./components/Button.tsx";
 import { DatePicker } from "./components/DatePicker.tsx";
 import "./App.css";
 
 function App() {
+    const testButtonRef = useRef<HTMLButtonElement>(null);
+    const inputRef = useRef<HTMLInputElement>(null);
+    const linkRef = useRef<HTMLAnchorElement>(null);
     const [bookingDate, setBookingDate] = useState("2026-10-10");
     const isWeekend = (date: string) => {
         const day = new Date(`${date}T00:00:00`).getDay();
@@ -17,6 +20,17 @@ function App() {
                 <h1 className="buttons-page__title">
                     Кнопки. размеры, состояния, вариации.
                 </h1>
+            </div>
+            <div className="buttons-page__ref">
+
+                <Button ref={testButtonRef} variant="fill" size="m" onClick={() => console.log(testButtonRef.current)}>
+                    testButton
+                </Button>
+
+                <Button as="a" href="#" variant="outline" size="s" ref={linkRef}>link</Button>
+
+                <input type="text" ref={inputRef} onClick={() => console.log(inputRef.current)} />
+
             </div>
             <div className="buttons-page__grid">
                 <div className="buttons-page__header-hint">default</div>

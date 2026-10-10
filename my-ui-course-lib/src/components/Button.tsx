@@ -1,7 +1,9 @@
-import type { ButtonProps } from "./ButtonProps";
+import React from "react";
+import type {ButtonAllProps} from "./ButtonProps";
 import "./Button.css";
 
 export function Button({
+        as = "button",
         variant,
         size,
         ButtonState = "default",
@@ -10,7 +12,7 @@ export function Button({
         type = "button",
         children,
         ...props
-}: ButtonProps) {
+}: ButtonAllProps) {
     const buttonClasses = [
         "button",
         `button--${variant}`,
@@ -20,9 +22,15 @@ export function Button({
         className
     ].filter(Boolean).join(" ");
 
+    const Tag = as as React.ElementType;
     return (
-        <button className={buttonClasses} disabled={disabled} type={type} {...props}>
+        <Tag
+            {...props}
+            className={buttonClasses}
+            disabled={as === "button" ? disabled : undefined}
+            type={as === "button" ? type : undefined}
+        >
             {children}
-        </button>
+        </Tag>
     );
 }

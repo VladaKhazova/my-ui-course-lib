@@ -12,11 +12,18 @@
   font-weight: 700;
 }
 
+.buttons-page__ref {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
 .buttons-page__grid {
   display: grid;
   grid-template-columns: repeat(4, max-content);
   gap: 36px 40px;
   align-items: center;
+  margin-top: 20px;
 }
 
 .buttons-page__header-hint {
