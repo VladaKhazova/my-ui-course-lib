@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { Button } from "./components/Button.tsx";
 import { DatePicker } from "./components/DatePicker.tsx";
+import { ButtonThemes } from "./examples/ButtonThemes";
 import "./App.css";
 
 function App() {
@@ -29,9 +30,10 @@ function App() {
 
                 <Button as="a" href="#" variant="outline" size="s" ref={linkRef}>link</Button>
 
-                <input type="text" ref={inputRef} onClick={() => console.log(inputRef.current)} />
+                <input type="text" name="ref-example" aria-label="Проверка ref поля ввода" ref={inputRef} onClick={() => console.log(inputRef.current)} />
 
             </div>
+            <ButtonThemes />
             <div className="buttons-page__grid">
                 <div className="buttons-page__header-hint">default</div>
                 <div className="buttons-page__header-hint">hover</div>

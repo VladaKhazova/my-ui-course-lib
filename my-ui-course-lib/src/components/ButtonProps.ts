@@ -1,13 +1,14 @@
-import {type ButtonHTMLAttributes, type ComponentPropsWithRef} from "react";
+import type {ComponentPropsWithRef} from "react";
 
 export type ButtonVariant = 'fill' | 'outline' | 'text';
 export type ButtonSize = 's' | 'm' | 'l';
 export type ButtonStates = "default" | "hover" | "active";
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    variant: ButtonVariant;
-    size: ButtonSize;
+export interface ButtonProps {
+    variant?: ButtonVariant;
+    size?: ButtonSize;
     ButtonState?: ButtonStates;
+    disabled?: boolean;
 }
 
 export type ButtonAsButtonProps = ButtonProps & ComponentPropsWithRef<"button"> & {
