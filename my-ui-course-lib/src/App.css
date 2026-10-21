@@ -26,6 +26,21 @@
   margin-top: 20px;
 }
 
+.buttons-page__themes {
+  margin-top: 32px;
+}
+
+.buttons-page__theme-examples {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.buttons-page__theme-group {
+  margin-top: 24px;
+}
+
 .buttons-page__header-hint {
   display: flex;
   justify-content: center;
