@@ -27,9 +27,7 @@ export function Calendar({
     const monthKey = getDateKey(shownMonth);
     const previousMonth = addMonths(shownMonth, -1);
     const nextMonth = addMonths(shownMonth, 1);
-    const isRtl = locale.dir === 'rtl';
 
-    // Запоминаем допустимый месяц, чтобы он не сбрасывался при снятии ограничений.
     if (month === undefined && (view.valueKey !== valueKey || !isSameMonth(view.month, shownMonth))) {
         setView({ month: shownMonth, valueKey });
     }
@@ -88,8 +86,8 @@ export function Calendar({
                     <Button variant="outline" className={styles.navigation} aria-label={locale.messages.calendar.prevMonth}
                             title={locale.messages.calendar.prevMonth} disabled={!isMonthInRange(previousMonth, limits)}
                             onClick={() => showMonth(previousMonth)}>
-                        <svg className={styles.chevron} viewBox="0 0 8 12" data-direction={isRtl ? 'next' : 'previous'} aria-hidden="true" focusable="false">
-                            <use href={`${import.meta.env.BASE_URL}icons.svg#calendar-chevron`} />
+                        <svg className={styles.chevron} width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                            <path d="M8.75 0.750046L0.75 6.75005L8.75 12.75" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" stroke="currentColor" />
                         </svg>
                     </Button>
                     <h3 className={styles.heading} id={headingId} aria-live="polite" aria-atomic="true">
@@ -98,8 +96,8 @@ export function Calendar({
                     <Button variant="outline" className={styles.navigation} aria-label={locale.messages.calendar.nextMonth}
                             title={locale.messages.calendar.nextMonth} disabled={!isMonthInRange(nextMonth, limits)}
                             onClick={() => showMonth(nextMonth)}>
-                        <svg className={styles.chevron} viewBox="0 0 8 12" data-direction={isRtl ? 'previous' : 'next'} aria-hidden="true" focusable="false">
-                            <use href={`${import.meta.env.BASE_URL}icons.svg#calendar-chevron`} />
+                        <svg className={styles.chevron} width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                            <path d="M0.750031 0.750046L8.75003 6.75005L0.750031 12.75" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" stroke="currentColor" />
                         </svg>
                     </Button>
                 </div>
@@ -152,8 +150,11 @@ export function Calendar({
                 <div className={styles.footer}>
                     <span className={styles.selectedDate}>{formatSelectedDate(value, locale.locale)}</span>
                     <Button variant="outline" className={styles.today} disabled={isDateUnavailable(today, limits)} onClick={handleToday}>
-                        <svg className={styles.icon} viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                            <use href={`${import.meta.env.BASE_URL}icons.svg#calendar-icon`} />
+                        <svg className={styles.icon} viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+                            <rect x="2" y="3" width="12" height="11" rx="2.5" />
+                            <line x1="2" y1="7" x2="14" y2="7" />
+                            <line x1="5.5" y1="2" x2="5.5" y2="4" />
+                            <line x1="10.5" y1="2" x2="10.5" y2="4" />
                         </svg>
                         {locale.messages.calendar.today}
                     </Button>

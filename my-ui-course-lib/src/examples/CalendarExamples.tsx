@@ -113,8 +113,11 @@ export function CalendarExamples() {
                                     setMonth(startOfMonth(today));
                                 }}
                             >
-                                <svg className={calendarStyles.icon} viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                                    <use href={`${import.meta.env.BASE_URL}icons.svg#calendar-icon`} />
+                                <svg className={calendarStyles.icon} viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+                                    <rect x="2" y="3" width="12" height="11" rx="2.5" />
+                                    <line x1="2" y1="7" x2="14" y2="7" />
+                                    <line x1="5.5" y1="2" x2="5.5" y2="4" />
+                                    <line x1="10.5" y1="2" x2="10.5" y2="4" />
                                 </svg>
                                 {locale.messages.calendar.today}
                             </Button>

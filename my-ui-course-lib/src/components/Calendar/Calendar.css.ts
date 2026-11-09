@@ -116,7 +116,9 @@ export const chevron = style({
     inlineSize: vars.calendarChevronWidth,
     blockSize: vars.calendarChevronHeight,
     flexShrink: 0,
-    selectors: { '&[data-direction="next"]': { transform: 'rotate(180deg)' } },
+    selectors: {
+        [`${root}[dir="rtl"] &`]: { transform: 'scaleX(-1)' },
+    },
 });
 
 export const grid = style({
