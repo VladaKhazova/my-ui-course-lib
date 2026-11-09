@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { Button } from "./components/Button.tsx";
 import { DatePicker } from "./components/DatePicker.tsx";
 import { ButtonThemes } from "./examples/ButtonThemes";
+import { CalendarExamples } from "./examples/CalendarExamples";
 import "./App.css";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
 
     return (
         <div className="buttons-page">
+            <CalendarExamples />
             <div className="buttons-page__header">
                 <h1 className="buttons-page__title">
                     Кнопки. размеры, состояния, вариации.
